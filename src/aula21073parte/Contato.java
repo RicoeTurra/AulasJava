@@ -1,5 +1,6 @@
 package aula21073parte;
-
+//Proteger os dados usando private e acessar com métodos get e set.
+//Evita que informações inválidas entrem no sistema.
 public class Contato {
     private String nome;
     private String telefone;
@@ -24,7 +25,7 @@ public class Contato {
         return nome;
     }
 
-    // SETTER DO TELEFONE
+    // SETTER DO TELEFONE Verifica se o telefone é null ou não tem 10 ou 11 dígitos numéricos (como "11999998888").
     public void setTelefone(String telefone) {
         if (telefone == null || !telefone.matches("\\d{10,11}")) {
             System.out.println("Telefone inválido: deve conter 10 ou 11 dígitos.");
@@ -38,7 +39,7 @@ public class Contato {
         return telefone;
     }
 
-    // SETTER DO EMAIL
+    // SETTER DO EMAIL Verifica se o email contém @ e .
     public void setEmail(String email) {
         if (email == null || !email.contains("@") || !email.contains(".")) {
             System.out.println("Email inválido.");
